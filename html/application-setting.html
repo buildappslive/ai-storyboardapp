@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Storyboard - Application Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Noto+Sans:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#135bec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "body": ["Noto Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom Scrollbar for dark theme consistency */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1c1f27; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3b4354; 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4b5563; 
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-body text-slate-900 dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-row overflow-x-hidden">
+<!-- Sidebar Navigation -->
+<aside class="hidden w-64 flex-col border-r border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#111318] md:flex">
+<div class="flex h-full flex-col justify-between p-4">
+<div class="flex flex-col gap-6">
+<!-- Logo Area -->
+<div class="flex items-center gap-3 px-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">movie_filter</span>
+</div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold font-display leading-normal">AI Storyboard</h1>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-[#9da6b9] dark:hover:bg-[#1c1f27] transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<p class="text-sm font-medium font-display leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-[#9da6b9] dark:hover:bg-[#1c1f27] transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">auto_awesome_motion</span>
+<p class="text-sm font-medium font-display leading-normal">Storyboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px] fill-current">settings</span>
+<p class="text-sm font-medium font-display leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-[#9da6b9] dark:hover:bg-[#1c1f27] transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">help</span>
+<p class="text-sm font-medium font-display leading-normal">Help</p>
+</a>
+</div>
+</div>
+<!-- User/Footer Area -->
+<div class="flex flex-col gap-4 border-t border-slate-200 dark:border-[#282e39] pt-4">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="size-8 rounded-full bg-gradient-to-tr from-primary to-purple-500 flex items-center justify-center text-white text-xs font-bold">
+              JS
+            </div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-sm font-medium font-display leading-tight">Local User</p>
+<p class="text-slate-400 dark:text-[#9da6b9] text-xs font-normal">No account required</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-y-auto">
+<!-- Top Mobile Header (visible only on small screens) -->
+<div class="md:hidden flex items-center justify-between p-4 border-b border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#111318]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">movie_filter</span>
+<span class="font-bold font-display dark:text-white">AI Storyboard</span>
+</div>
+<button class="text-slate-500 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="layout-container flex h-full grow flex-col max-w-[1200px] mx-auto w-full px-4 md:px-8 py-6 md:py-10">
+<!-- Page Header -->
+<div class="flex flex-col gap-2 mb-8 animate-fade-in">
+<h1 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-bold font-display leading-tight tracking-[-0.033em]">Application Settings</h1>
+<p class="text-slate-500 dark:text-[#9da6b9] text-base font-normal leading-normal max-w-2xl">
+                Configure your API connections to power the storyboard generation engine. Your keys are stored locally in your browser and are never sent to our servers.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Left Column: Settings Forms -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- LLM Section -->
+<section class="flex flex-col gap-4 bg-white dark:bg-[#111318] p-6 rounded-xl border border-slate-200 dark:border-[#282e39] shadow-sm">
+<div class="flex items-center justify-between border-b border-slate-100 dark:border-[#282e39] pb-4 mb-2">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold font-display flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+                            LLM Configuration
+                        </h2>
+<span class="px-2 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-medium border border-green-500/20">Auto-saved</span>
+</div>
+<!-- Provider Select -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-sm font-medium font-display leading-normal">Select Provider</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-slate-300 dark:border-[#3b4354] bg-slate-50 dark:bg-[#1c1f27] px-4 py-3 pr-10 text-slate-900 dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary font-body text-base transition-shadow">
+<option value="openai">OpenAI (GPT-4)</option>
+<option value="anthropic">Anthropic (Claude 3)</option>
+<option value="local">Local LLM (Ollama)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500 dark:text-[#9da6b9]">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- API Key Input -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-900 dark:text-white text-sm font-medium font-display leading-normal">API Key</label>
+<a class="text-xs text-primary hover:underline flex items-center gap-1" href="#">
+                                Get your key
+                                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+<div class="relative group">
+<input class="w-full rounded-lg border border-slate-300 dark:border-[#3b4354] bg-slate-50 dark:bg-[#1c1f27] px-4 py-3 pr-12 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#9da6b9] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary font-body transition-shadow" placeholder="sk-..." type="password" value="sk-s8d7f6s8d7f6s8d7f6s8d7f6"/>
+<button class="absolute inset-y-0 right-0 flex items-center px-4 text-slate-400 hover:text-slate-600 dark:text-[#9da6b9] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+<p class="text-xs text-slate-500 dark:text-[#6b7280]">Key is required for story generation.</p>
+</div>
+<!-- Model Override -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-sm font-medium font-display leading-normal">Model Name (Optional)</label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-[#3b4354] bg-slate-50 dark:bg-[#1c1f27] px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#9da6b9] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary font-body transition-shadow" placeholder="e.g. gpt-4-turbo" type="text"/>
+</div>
+</section>
+<!-- Instagram Integration Section -->
+<section class="flex flex-col gap-4 bg-white dark:bg-[#111318] p-6 rounded-xl border border-slate-200 dark:border-[#282e39] shadow-sm">
+<div class="flex items-center justify-between border-b border-slate-100 dark:border-[#282e39] pb-4 mb-2">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold font-display flex items-center gap-2">
+<span class="material-symbols-outlined text-pink-500">photo_camera</span>
+                           Instagram Integration
+                       </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-sm font-medium font-display leading-normal">App ID</label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-[#3b4354] bg-slate-50 dark:bg-[#1c1f27] px-4 py-3 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#9da6b9] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary font-body transition-shadow" placeholder="1234567890" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-slate-900 dark:text-white text-sm font-medium font-display leading-normal">App Secret</label>
+<div class="relative">
+<input class="w-full rounded-lg border border-slate-300 dark:border-[#3b4354] bg-slate-50 dark:bg-[#1c1f27] px-4 py-3 pr-12 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-[#9da6b9] focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary font-body transition-shadow" placeholder="••••••••••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center px-4 text-slate-400 hover:text-slate-600 dark:text-[#9da6b9] dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-full h-1 bg-slate-100 dark:bg-[#282e39] rounded-full overflow-hidden">
+<div class="h-full bg-yellow-500 w-1/3"></div>
+</div>
+<span class="text-xs text-yellow-600 dark:text-yellow-500 whitespace-nowrap">Setup Incomplete</span>
+</div>
+</section>
+<!-- Action Bar -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 mt-4 pt-4 border-t border-transparent dark:border-transparent">
+<button class="w-full sm:w-auto px-6 py-3 rounded-lg text-slate-600 dark:text-[#9da6b9] hover:bg-slate-100 dark:hover:bg-[#1c1f27] font-medium font-display transition-colors text-sm">
+                        Reset to Defaults
+                    </button>
+<button class="w-full sm:w-auto px-8 py-3 rounded-lg bg-primary hover:bg-blue-600 text-white font-medium font-display shadow-lg shadow-blue-500/20 transition-all transform active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">save</span>
+                        Save Settings
+                    </button>
+</div>
+</div>
+<!-- Right Column: Info Cards -->
+<div class="flex flex-col gap-6">
+<!-- Privacy Card -->
+<div class="relative overflow-hidden rounded-xl bg-[#111318] group">
+<div class="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-500 group-hover:scale-105" data-alt="Abstract digital lock gradient background" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKqfzO2nbP5mX9gVYiFrzRTf17LGnRrJbtM0CGHuv-n-HlfBo475cWWmJpV1F7AEd1Uw6uWAUXrtRqM_4x2dNJxA_dhYhbKnSjJQ-Y7X3aNSxT6tH6O6e5EL5nQ79mP065TxCCgj0ayzzYnvzYJTH6s4wL0Y7ij83az-G1sVZOTFCCyg8AJOkxHjfFIHprZngH2D9yRKPfsfOKk8N6SzkL3Bhqpo6P-e6uvG5JP4NA0hL-52Y5SII-MkjRyoLQ_eW-rMPDiCCucsg");'></div>
+<div class="relative z-10 p-6 flex flex-col gap-4 h-full justify-end min-h-[240px]">
+<div class="bg-primary/20 p-2 rounded-lg w-fit text-white backdrop-blur-sm">
+<span class="material-symbols-outlined">shield_lock</span>
+</div>
+<div>
+<h3 class="text-white text-xl font-bold font-display leading-tight mb-2">Privacy First</h3>
+<p class="text-slate-200 text-sm font-normal leading-relaxed">
+                                Your API keys are encrypted and stored securely in your browser's local storage. We never transmit them to our servers.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Tips Card -->
+<div class="bg-white dark:bg-[#1c1f27] p-6 rounded-xl border border-slate-200 dark:border-[#282e39] flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold font-display">Pro Tip</h3>
+</div>
+<p class="text-slate-500 dark:text-[#9da6b9] text-sm leading-relaxed">
+                         Using a local LLM like Ollama reduces latency and eliminates API costs. Ensure your local server is running on port 11434.
+                     </p>
+<a class="text-primary text-sm font-medium hover:underline" href="#">Learn how to setup local LLM →</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

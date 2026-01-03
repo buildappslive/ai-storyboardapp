@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Help &amp; Setup Guide - AI Storyboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white font-display">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5e7eb] dark:border-b-[#2a2e37] px-6 md:px-10 py-3 bg-white dark:bg-[#1a202c]">
+<div class="flex items-center gap-4 text-[#111318] dark:text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined text-3xl">movie_edit</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AI Storyboard</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">My Storyboards</a>
+<a class="text-[#111318] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Settings</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Help</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/20">
+<span class="truncate">New Project</span>
+</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined cursor-pointer text-[#111318] dark:text-white">menu</span>
+</div>
+</header>
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="w-full bg-white dark:bg-[#1a202c] border-b border-[#e5e7eb] dark:border-[#2a2e37]">
+<div class="max-w-[1280px] mx-auto px-6 md:px-10 py-10 md:py-14">
+<div class="flex flex-col gap-4 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary w-fit">
+<span class="material-symbols-outlined text-sm">school</span>
+<span class="text-xs font-bold uppercase tracking-wide">Documentation</span>
+</div>
+<h1 class="text-[#111318] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Help &amp; Setup Guide</h1>
+<p class="text-[#616f89] dark:text-gray-400 text-lg font-normal leading-relaxed">
+                        A complete guide to configuring your API keys and creating AI-generated storyboards.
+                        We prioritize your privacy — keys are stored locally, and no login is required.
+                    </p>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-6 md:px-10 py-10 w-full flex flex-col lg:flex-row gap-10">
+<aside class="hidden lg:block w-64 shrink-0">
+<div class="sticky top-24 flex flex-col gap-6">
+<div class="flex flex-col">
+<h3 class="text-[#111318] dark:text-white text-sm font-bold uppercase tracking-wider mb-4">On This Page</h3>
+<nav class="flex flex-col gap-1">
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-medium border-l-4 border-primary" href="#getting-started">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+<span class="text-sm">Getting Started</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg text-[#616f89] dark:text-gray-400 hover:text-[#111318] dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all" href="#api-configuration">
+<span class="material-symbols-outlined text-[20px]">key</span>
+<span class="text-sm">API Configuration</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg text-[#616f89] dark:text-gray-400 hover:text-[#111318] dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all" href="#using-storyboarder">
+<span class="material-symbols-outlined text-[20px]">movie_filter</span>
+<span class="text-sm">Using Storyboarder</span>
+</a>
+<a class="group flex items-center gap-3 px-3 py-2 rounded-lg text-[#616f89] dark:text-gray-400 hover:text-[#111318] dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-all" href="#faq">
+<span class="material-symbols-outlined text-[20px]">quiz</span>
+<span class="text-sm">FAQ &amp; Troubleshooting</span>
+</a>
+</nav>
+</div>
+<div class="rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 p-5 text-white shadow-lg">
+<h4 class="font-bold text-lg mb-2">Need API Keys?</h4>
+<p class="text-blue-100 text-sm mb-4">Jump straight to settings to input your new keys.</p>
+<button class="w-full py-2 bg-white text-blue-700 rounded-lg text-sm font-bold hover:bg-blue-50 transition-colors">
+                            Go to Settings
+                        </button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col gap-12 max-w-4xl">
+<section class="scroll-mt-28" id="getting-started">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex items-center justify-center size-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-primary">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-3xl font-bold">Getting Started</h2>
+</div>
+<div class="prose max-w-none text-[#616f89] dark:text-gray-300 font-body">
+<p class="mb-4">
+                            Welcome to AI Storyboard! This tool allows you to generate visual storyboards from text scripts using the power of Large Language Models (LLMs) and image generation APIs.
+                        </p>
+<div class="flex flex-col md:flex-row gap-4 p-5 rounded-xl border border-blue-100 bg-blue-50/50 dark:bg-blue-900/10 dark:border-blue-900/30 my-6">
+<div class="shrink-0 text-primary">
+<span class="material-symbols-outlined text-3xl">security</span>
+</div>
+<div>
+<h4 class="text-[#111318] dark:text-white font-bold text-lg mb-1">Important: Privacy &amp; Security</h4>
+<p class="text-sm leading-relaxed">
+                                    Your API keys are stored <strong>locally in your browser</strong> to communicate directly with LLM and Instagram services. We do not store your keys on our servers. Clearing your browser cache will remove these keys.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<hr class="border-[#e5e7eb] dark:border-[#2a2e37]"/>
+<section class="scroll-mt-28" id="api-configuration">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex items-center justify-center size-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-primary">
+<span class="material-symbols-outlined">key</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-3xl font-bold">API Configuration</h2>
+</div>
+<p class="text-[#616f89] dark:text-gray-300 mb-8 font-body">
+                        To use the generator, you need to provide your own API keys. This allows you to control your usage and costs directly with the providers.
+                    </p>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="flex flex-col rounded-xl border border-[#e5e7eb] dark:border-[#2a2e37] bg-white dark:bg-[#1f2530] overflow-hidden">
+<div class="p-5 border-b border-[#e5e7eb] dark:border-[#2a2e37] bg-gray-50/50 dark:bg-gray-800/30">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+<h3 class="font-bold text-lg text-[#111318] dark:text-white">1. LLM Provider</h3>
+</div>
+<p class="text-sm text-[#616f89] dark:text-gray-400">OpenAI or Anthropic for script analysis.</p>
+</div>
+<div class="p-5 flex flex-col gap-4 font-body text-sm text-[#616f89] dark:text-gray-300">
+<ol class="list-decimal list-inside space-y-2 marker:text-primary marker:font-bold">
+<li>Sign up at <a class="text-primary hover:underline" href="#">OpenAI Platform</a> or <a class="text-primary hover:underline" href="#">Anthropic Console</a>.</li>
+<li>Navigate to the API Keys section in your dashboard.</li>
+<li>Create a new secret key (starts with <code>sk-...</code>).</li>
+<li>Copy the key immediately.</li>
+</ol>
+<div class="mt-2 p-3 bg-gray-100 dark:bg-gray-900 rounded border border-dashed border-gray-300 dark:border-gray-700 font-mono text-xs break-all text-gray-500">
+                                    sk-proj-1234567890abcdef...
+                                </div>
+</div>
+</div>
+<div class="flex flex-col rounded-xl border border-[#e5e7eb] dark:border-[#2a2e37] bg-white dark:bg-[#1f2530] overflow-hidden">
+<div class="p-5 border-b border-[#e5e7eb] dark:border-[#2a2e37] bg-gray-50/50 dark:bg-gray-800/30">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-pink-600">photo_camera</span>
+<h3 class="font-bold text-lg text-[#111318] dark:text-white">2. Instagram Graph API</h3>
+</div>
+<p class="text-sm text-[#616f89] dark:text-gray-400">For publishing or fetching media assets.</p>
+</div>
+<div class="p-5 flex flex-col gap-4 font-body text-sm text-[#616f89] dark:text-gray-300">
+<ol class="list-decimal list-inside space-y-2 marker:text-primary marker:font-bold">
+<li>Go to <a class="text-primary hover:underline" href="#">Meta for Developers</a> and create an app.</li>
+<li>Add "Instagram Graph API" product.</li>
+<li>Generate a User Access Token via Graph API Explorer.</li>
+<li>Ensure `instagram_basic` permission is checked.</li>
+</ol>
+<div class="mt-2 p-3 bg-gray-100 dark:bg-gray-900 rounded border border-dashed border-gray-300 dark:border-gray-700 font-mono text-xs break-all text-gray-500">
+                                    EAAJ... (Long Token String)
+                                </div>
+</div>
+</div>
+</div>
+</section>
+<hr class="border-[#e5e7eb] dark:border-[#2a2e37]"/>
+<section class="scroll-mt-28" id="using-storyboarder">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex items-center justify-center size-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-primary">
+<span class="material-symbols-outlined">movie_filter</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-3xl font-bold">Using the Storyboarder</h2>
+</div>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary text-white font-bold text-sm shadow-md">1</div>
+<div class="w-0.5 grow bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<div class="pb-8">
+<h3 class="text-xl font-bold text-[#111318] dark:text-white mb-2">Input Your Script</h3>
+<p class="text-[#616f89] dark:text-gray-300 font-body mb-3">
+                                    Paste your video script, dialogue, or rough notes into the main text area on the Home page. The AI works best with descriptive scene settings.
+                                </p>
+<div class="p-4 bg-gray-50 dark:bg-[#1a202c] rounded-lg border-l-4 border-green-500">
+<p class="text-xs font-bold text-gray-500 uppercase mb-1">Good Prompt Example</p>
+<p class="text-sm italic text-gray-700 dark:text-gray-300">
+                                        "Exterior, Day. A busy futuristic street market in Tokyo. Neon signs glow even in daylight. A young woman with blue hair buys an apple from a robot vendor."
+                                    </p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary text-white font-bold text-sm shadow-md">2</div>
+<div class="w-0.5 grow bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<div class="pb-8">
+<h3 class="text-xl font-bold text-[#111318] dark:text-white mb-2">Generate Scenes</h3>
+<p class="text-[#616f89] dark:text-gray-300 font-body">
+                                    Click the <strong>Generate</strong> button. The system will first break your script into scenes using the LLM, then generate an image for each scene using the image generation API. This process usually takes 30-60 seconds.
+                                </p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center gap-2">
+<div class="flex items-center justify-center size-8 rounded-full bg-primary text-white font-bold text-sm shadow-md">3</div>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#111318] dark:text-white mb-2">Edit &amp; Export</h3>
+<p class="text-[#616f89] dark:text-gray-300 font-body">
+                                    Review the generated images. You can regenerate specific panels if they don't match your vision. Once satisfied, export the entire board as a PDF or ZIP file.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<hr class="border-[#e5e7eb] dark:border-[#2a2e37]"/>
+<section class="scroll-mt-28" id="faq">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex items-center justify-center size-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-primary">
+<span class="material-symbols-outlined">quiz</span>
+</div>
+<h2 class="text-[#111318] dark:text-white text-3xl font-bold">FAQ &amp; Troubleshooting</h2>
+</div>
+<div class="grid gap-4">
+<details class="group bg-white dark:bg-[#1f2530] border border-[#e5e7eb] dark:border-[#2a2e37] rounded-lg p-4 cursor-pointer [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-bold text-[#111318] dark:text-white">
+<span>Is this application free to use?</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-[#616f89] dark:text-gray-300 text-sm leading-relaxed font-body">
+                                The web application itself is free to use. However, because it relies on your own API keys, you will be billed directly by the API providers (e.g., OpenAI, Anthropic) based on your usage.
+                            </p>
+</details>
+<details class="group bg-white dark:bg-[#1f2530] border border-[#e5e7eb] dark:border-[#2a2e37] rounded-lg p-4 cursor-pointer [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-bold text-[#111318] dark:text-white">
+<span>Where are my storyboards saved?</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-[#616f89] dark:text-gray-300 text-sm leading-relaxed font-body">
+                                All storyboards and project data are saved locally in your browser's storage (IndexedDB/Local Storage). We do not persist your creative work on our servers. Make sure to export your work before clearing browser data.
+                            </p>
+</details>
+<details class="group bg-white dark:bg-[#1f2530] border border-[#e5e7eb] dark:border-[#2a2e37] rounded-lg p-4 cursor-pointer [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-bold text-[#111318] dark:text-white">
+<span>Which LLM model works best for storyboarding?</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-[#616f89] dark:text-gray-300 text-sm leading-relaxed font-body">
+                                For detailed scene descriptions and complex narratives, we recommend using stronger models like GPT-4 or Claude 3 Opus. For faster, more cost-effective results, GPT-3.5 Turbo or Claude 3 Haiku are sufficient.
+                            </p>
+</details>
+<details class="group bg-white dark:bg-[#1f2530] border border-[#e5e7eb] dark:border-[#2a2e37] rounded-lg p-4 cursor-pointer [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-bold text-[#111318] dark:text-white">
+<span>"Invalid API Key" Error</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-[#616f89] dark:text-gray-300 text-sm leading-relaxed font-body">
+                                Double-check that you copied the entire key string without extra spaces. For Instagram keys, ensure the token hasn't expired (standard tokens expire in 1 hour; generate a long-lived token for better experience).
+                            </p>
+</details>
+<details class="group bg-white dark:bg-[#1f2530] border border-[#e5e7eb] dark:border-[#2a2e37] rounded-lg p-4 cursor-pointer [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-bold text-[#111318] dark:text-white">
+<span>Images are not generating</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-[#616f89] dark:text-gray-300 text-sm leading-relaxed font-body">
+                                This is often due to a rate limit from the provider or insufficient credits in your OpenAI/Anthropic account. Check your usage dashboard on the provider's website.
+                            </p>
+</details>
+<details class="group bg-white dark:bg-[#1f2530] border border-[#e5e7eb] dark:border-[#2a2e37] rounded-lg p-4 cursor-pointer [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex items-center justify-between font-bold text-[#111318] dark:text-white">
+<span>How do I clear my keys?</span>
+<span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-[#616f89] dark:text-gray-300 text-sm leading-relaxed font-body">
+                                You can clear your keys by clicking the "Reset Settings" button in the Settings page, or by manually clearing your browser's Local Storage for this site.
+                            </p>
+</details>
+</div>
+</section>
+<div class="mt-10 p-8 rounded-xl bg-background-light dark:bg-[#1f2530] border border-[#e5e7eb] dark:border-[#2a2e37] text-center">
+<h3 class="text-xl font-bold text-[#111318] dark:text-white mb-2">Still need help?</h3>
+<p class="text-[#616f89] dark:text-gray-400 mb-6">Check out our community discord or email support.</p>
+<div class="flex justify-center gap-4">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white dark:bg-[#2a2e37] border border-[#e5e7eb] dark:border-gray-600 text-[#111318] dark:text-white font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-sm">mail</span>
+                            Contact Support
+                        </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white dark:bg-[#2a2e37] border border-[#e5e7eb] dark:border-gray-600 text-[#111318] dark:text-white font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-sm">forum</span>
+                            Community Forum
+                        </button>
+</div>
+</div>
+</main>
+</div>
+<footer class="w-full border-t border-[#e5e7eb] dark:border-[#2a2e37] bg-white dark:bg-[#1a202c] py-8">
+<div class="max-w-[1280px] mx-auto px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2 text-[#616f89] dark:text-gray-400">
+<span class="material-symbols-outlined text-lg">movie_edit</span>
+<span class="text-sm font-medium">© 2024 AI Storyboard. All rights reserved.</span>
+</div>
+<div class="flex gap-6">
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-sm text-[#616f89] dark:text-gray-400 hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>
