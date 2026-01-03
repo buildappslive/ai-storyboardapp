@@ -4,17 +4,34 @@ import ThemeToggle from './ThemeToggle';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     const isActive = (path: string) => location.pathname === path;
 
+    // Close menu when route changes
+    React.useEffect(() => {
+        setIsMenuOpen(false);
+    }, [location]);
+
     return (
-        <div className="relative flex h-full min-h-screen w-full flex-row overflow-x-hidden bg-background-light dark:bg-background-dark font-body text-slate-900 dark:text-white transition-colors duration-200">
+        <div className="relative flex h-full min-h-screen w-full flex-row overflow-hidden bg-background-light dark:bg-background-dark font-body text-slate-900 dark:text-white transition-colors duration-200">
             {/* Sidebar Navigation */}
-            <aside className="hidden w-64 flex-col border-r border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#111318] md:flex">
-                <div className="flex h-full flex-col justify-between p-4">
+            <aside className={`
+                fixed inset-y-0 left-0 z-50 w-64 bg-white dark:bg-[#111318] border-r border-slate-200 dark:border-[#282e39] transition-transform duration-300 ease-in-out md:static md:translate-x-0
+                ${isMenuOpen ? 'translate-x-0 shadow-xl' : '-translate-x-full'}
+            `}>
+                <div className="flex h-full flex-col justify-between p-4 relative">
+                    {/* Mobile Close Button */}
+                    <button
+                        onClick={() => setIsMenuOpen(false)}
+                        className="absolute right-4 top-4 md:hidden text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                    >
+                        <span className="material-symbols-outlined">close</span>
+                    </button>
+
                     <div className="flex flex-col gap-6">
                         {/* Logo Area */}
-                        <div className="flex items-center gap-3 px-2">
+                        <div className="flex items-center gap-3 px-2 pt-2 md:pt-0">
                             <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 bg-primary/20 flex items-center justify-center text-primary">
                                 <span className="material-symbols-outlined text-2xl">movie_filter</span>
                             </div>
@@ -83,16 +100,27 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 </div>
             </aside>
 
+            {/* Mobile Overlay */}
+            {isMenuOpen && (
+                <div
+                    className="fixed inset-0 z-40 bg-black/50 md:hidden backdrop-blur-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                />
+            )}
+
             {/* Main Content Area */}
-            <main className="flex-1 flex flex-col h-full overflow-y-auto w-full">
+            <main className="flex-1 flex flex-col h-full overflow-y-auto w-full relative">
                 {/* Top Mobile Header */}
-                <div className="md:hidden flex items-center justify-between p-4 border-b border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#111318]">
+                <div className="md:hidden flex items-center justify-between p-4 border-b border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#111318] sticky top-0 z-30">
                     <div className="flex items-center gap-2">
                         <span className="material-symbols-outlined text-primary">movie_filter</span>
                         <span className="font-bold font-display dark:text-white">AI Storyboard</span>
                     </div>
-                    <button className="text-slate-500 dark:text-white">
-                        <span className="material-symbols-outlined">menu</span>
+                    <button
+                        onClick={() => setIsMenuOpen(true)}
+                        className="text-slate-500 hover:text-slate-900 dark:text-white dark:hover:text-slate-300 transition-colors p-1"
+                    >
+                        <span className="material-symbols-outlined text-2xl">menu</span>
                     </button>
                 </div>
 
