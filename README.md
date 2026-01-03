@@ -38,3 +38,6 @@ You can optionally set a default API key for development validation in a `.env` 
 VITE_GEMINI_API_KEY=your_key_here
 ```
 However, using the **Settings** page in the UI is recommended.
+
+### How to get Gemini API Key
+[Watch this video to learn how to get your Gemini API key](https://www.youtube.com/shorts/T1BTyo1A4Ww)
