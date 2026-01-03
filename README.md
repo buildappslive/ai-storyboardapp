@@ -2,6 +2,10 @@
 
 An intelligent application that turns your script into visual storyboards using Google's Gemini API.
 
+## Demo
+
+![Application Walkthrough](public/demo.webp)
+
 ## Features
 
 - **AI-Powered Generation**: Instantly converts text scripts into visual panels.
