@@ -116,3 +116,6 @@ dist
 # IDEs
 .vscode/
 .idea/
+
+# Custom Scripts
+set_git_identity.sh
