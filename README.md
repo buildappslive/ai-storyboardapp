@@ -41,3 +41,9 @@ However, using the **Settings** page in the UI is recommended.
 
 ### How to get Gemini API Key
 [Watch this video to learn how to get your Gemini API key](https://www.youtube.com/shorts/T1BTyo1A4Ww)
+
+## Support
+
+For support inquiries, please contact us at [inquiry@buildapps.live](mailto:inquiry@buildapps.live).
+
+Visit our website: [https://buildapps.live](https://buildapps.live)

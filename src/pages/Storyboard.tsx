@@ -178,6 +178,7 @@ const Storyboard: React.FC = () => {
                                     panel={panel}
                                     index={idx + 1}
                                     onClick={() => setSelectedPanelIndex(idx)}
+                                    aspectRatio={isInstagramMode ? '1:1' : '16:9'}
                                 />
                             ))}
                         </div>
